@@ -26,9 +26,9 @@ export const DataContextProvider = ({ children }) => {
 
   const getTotalCartAmount = () =>{
     var totalAmount = 0;
-    for(var item in itemCount){
+    for(const item in itemCount){
       if( itemCount[item] > 0){
-        var FilteredList = food_list.find((list) => list._id === item)
+        const FilteredList = food_list.find((list) => list._id === item)
         totalAmount += FilteredList.price * itemCount[item];
       }
     }
